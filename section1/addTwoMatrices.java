@@ -1,4 +1,3 @@
-package section1_NP;
 
 import java.util.Scanner;
 
