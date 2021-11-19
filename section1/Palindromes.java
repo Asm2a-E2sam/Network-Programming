@@ -15,6 +15,7 @@ public class Palindromes {
             System.out.println("Enter a String: ");
             str = input.nextLine();
             if (str.equals("CLOSE")) {
+                System.out.println("**** GOODBYE ^_^ ****");
                 break;
             }
             boolean flag =true;
