@@ -1,5 +1,7 @@
 package Tasks;
 
+import java.util.Scanner;
+
 public class RandomCharacter {
 
     public static char getRandomChar(char startChar, char endChar) {
@@ -24,9 +26,30 @@ public class RandomCharacter {
 }
 
 class Main {
+    private static Scanner input =new Scanner(System.in);
     public static void main(String args[]) {
-        final int NUM_OF_CHARS = 175;
-        final int CHARS_PER_LINE = 25;
+        String flag ;
+        while (true){
+            System.out.println("Do you want to leave?");
+            System.out.println("Enter Yes or No.");
+            flag =input.next();
+            if (flag.equals("Yes")) {
+                System.out.println("**** GOODBYE ^_^ ****");
+                break;
+            }else{
+                RandomFunc();
+            }
+        }
+
+    }
+    public static void RandomFunc(){
+        final int NUM_OF_CHARS ;
+        System.out.println("Enter number of char : ");
+        NUM_OF_CHARS = input.nextInt();
+        final int CHARS_PER_LINE ;
+        System.out.println("Enter number of char in one line : ");
+        CHARS_PER_LINE = input.nextInt();
+
         for (int i = 0; i<NUM_OF_CHARS; i++){
             char ch = RandomCharacter.getRandomLowerChar();
             if((i+1)%CHARS_PER_LINE == 0)
@@ -34,6 +57,7 @@ class Main {
             else
                 System.out.print(ch);
         }
-        int [] x = new int[10];
+        System.out.println();
+        System.out.println("***********************************");
     }
 }
