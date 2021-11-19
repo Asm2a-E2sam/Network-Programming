@@ -6,6 +6,7 @@ public class Palindromes {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
         String str ;
+        System.out.print("Enter a String: ");
         str = input.nextLine();
         boolean flag =true;
         int size = str.length();
